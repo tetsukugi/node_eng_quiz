@@ -1,6 +1,52 @@
-データベースの内容を表示
+HOW TO USE (ubuntu)
 
+--
+npm install
+--
+or
+--
+yarn install
+--
+
+
+PostgreSQL install
+--
+sudo apt install -y postgresql
+--
+
+postgres という名前のユーザーでlogin(logoutするには exit)
+--
+sudo su - postgres
+--
+
+PostgreSQL のターミナル型フロントエンドを起動
+--
+psql
+--
+
+PostgreSQL を使う際のパスワード変更
+postgres という PostgreSQL 内のユーザーのパスワードを postgres というパスワードに変更
+--
+alter role postgres with password 'postgres';
+--
+
+
+quiz_logのデータベースを作成
+--
+create database quiz_log;
+--
+
+
+(app使用後 Logテーブルが作成される)データベースの内容を表示
+--
 sudo su - postgres
 psql
 \c quiz_log
 select * from "Log";
+--
+
+psql のターミナルを終了
+--
+\q
+--
+
