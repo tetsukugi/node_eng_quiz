@@ -1,0 +1,6 @@
+データベースの内容を表示
+
+sudo su - postgres
+psql
+\c quiz_log
+select * from "Log";

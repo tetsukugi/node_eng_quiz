@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title score
+
+  body
+    li
+      a(href="/home") home
+    li
+      a(href="/logout").float-right logout
+    h1 score
+    hr
+    h2 result
+    hr
+    each post in posts
+      p question-#{post.count}
+      // p #{q}
+      p judge: #{post.judge}
+      // p your_answer: #{user_answer}
+      // p correct_answer: #{a}
+      p Date: #{post.createdAt}
+      hr
